@@ -47,7 +47,7 @@ Then, fetch some of the config we figured out in the MinGW days
 ```
 curl -OL https://github.com/OULibraries/MinGW-Setup/raw/master/msys/1.0/etc/profile.d/ssh-agent.sh
 chmod +x ssh-agent.sh
-mv ssh-agent /etc/profile.d/
+mv ssh-agent.sh /etc/profile.d/
 mkdir .ssh
 chown 700 .ssh
 ```
