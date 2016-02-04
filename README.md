@@ -6,7 +6,7 @@ We like to have our user folders unified between msys2 and windows.
 Open CMD as administrator, run the following:
 ```
 copy C:\msys64\home\%USERNAME%\* %USERPROFILE%
-del /Q C:\msys64\home\%USERNAME%
+rmdir /Q C:\msys64\home\%USERNAME%
 mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 ```
 
