@@ -39,7 +39,9 @@ Install our various utilities and helpers
 pacman -S --needed --noconfirm \
 mingw64/mingw-w64-x86_64-python2 \
 mingw64/mingw-w64-x86_64-emacs \
-msys/git msys/nano
+msys/vim \
+msys/nano \
+msys/git 
 ```
 Then, fetch some of the config we figured out in the MinGW days
 ```
