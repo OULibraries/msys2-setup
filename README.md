@@ -51,10 +51,10 @@ msys/git
 
 # Configure Vim
 
-Too keep vim from falling back on strict vi emulation, create a ~/.vimrc file and add the following line:
+Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation: 
 
 ```
-set nocompatible
+echo "set nocompatible" >> ~/.vimrc
 ```
 
 
