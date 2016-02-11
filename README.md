@@ -48,6 +48,13 @@ msys/vim \
 msys/nano \
 msys/git 
 ```
+# Configure Vim
+
+Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation: 
+
+```
+echo "set nocompatible" >> ~/.vimrc
+```
 
 # Set up SSH Agent
 
@@ -81,5 +88,3 @@ to let ssh-agent know about the newly created ssh key.
 # Set up your SSH Key at GitHub
 
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
-
-
