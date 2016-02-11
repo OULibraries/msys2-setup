@@ -49,6 +49,17 @@ msys/nano \
 msys/git 
 ```
 
+# Configure Vim
+
+Too keep vim from falling back on strict vi emulation, create a ~/.vimrc file and add the following line:
+
+```
+set nocompatible
+```
+
+
+
+
 # Set upSSH Agent
 
 Fetch some of the config we figured out in the MinGW days
