@@ -60,7 +60,7 @@ echo "set nocompatible" >> ~/.vimrc
 
 Fetch some of the config we figured out in the MinGW days
 ```
-curl -OL https://github.com/OULibraries/MinGW-Setup/raw/master/msys/1.0/etc/profile.d/ssh-agent.sh
+curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh
 chmod +x ssh-agent.sh
 mv ssh-agent.sh /etc/profile.d/
 mkdir .ssh
