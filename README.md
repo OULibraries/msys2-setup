@@ -1,6 +1,7 @@
 ## Install MSYS2 64
 Get msys2  from http://msys2.github.io/
 
+## Note that you can copy/paste the commands in the code blocks
 
 ##  Unify MSYS2 and Windows homes
 We like to have our user folders unified between msys2 and windows.
@@ -8,7 +9,11 @@ We like to have our user folders unified between msys2 and windows.
 Open CMD as administrator, run the following:
 ```
 copy C:\msys64\home\%USERNAME%\* %USERPROFILE%
-rmdir /Q C:\msys64\home\%USERNAME%
+```
+```
+rename C:\msys64\home\%USERNAME% %USERNAME%.bak
+```
+```
 mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 ```
 
@@ -48,6 +53,7 @@ msys/vim \
 msys/nano \
 msys/git 
 ```
+
 # Configure Vim
 
 Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation: 
@@ -56,34 +62,25 @@ Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation:
 echo "set nocompatible" >> ~/.vimrc
 ```
 
-# Set up SSH Agent
-
-Fetch some of the config we figured out in the MinGW days
-```
-curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh
-chmod +x ssh-agent.sh
-mv ssh-agent.sh /etc/profile.d/
-mkdir .ssh
-chown 700 .ssh
-```
-Then close and reopen msys2
-
-
-# Generate an SSH Key and let ssh-agent know about it
+# Generate an SSH Key
 
 In the msys2 shell, run  
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-to generate an ssh keys. Fill in your personal email, but accepting the details for everything else is OK.
+to generate an ssh keys. Fill in your personal email and a strong passphrase, but accept the defaults for everything else, including the key name and location.
 
-Then run 
+# Set up SSH Agent
 
+Fetch some of the config we figured out in the MinGW days
 ```
-ssh-add ~/.ssh/id_rsa
-``` 
-to let ssh-agent know about the newly created ssh key. 
-
+curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh && \
+chmod +x ssh-agent.sh && \
+mv ssh-agent.sh /etc/profile.d/ && \
+mkdir .ssh && \
+chown 700 .ssh
+```
+Then close and reopen msys2
 
 # Set up your SSH Key at GitHub
 
