@@ -86,9 +86,12 @@ Then close and reopen msys2
 
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
 
+# Install VirtualBox and Vagrant
 
+## Virtualbox 
+Download and install the latest VirtualBox Platform Pack and VirtualBox Extension Pack from https://www.virtualbox.org.
 
-# Install Vagrant
+##Vagrant
 
 Download and install [https://www.vagrantup.com/](https://www.vagrantup.com/)
 
