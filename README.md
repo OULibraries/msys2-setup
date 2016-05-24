@@ -1,4 +1,4 @@
-## Install MSYS2 64
+# Install MSYS2 64
 Get msys2  from http://msys2.github.io/
 
 ## Note that you can copy/paste the commands in the code blocks
@@ -85,3 +85,14 @@ Then close and reopen msys2
 # Set up your SSH Key at GitHub
 
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
+
+
+
+# Install Vagrant
+
+Download and install [https://www.vagrantup.com/](https://www.vagrantup.com/)
+
+Windows 10 users may run in to [this bug](https://github.com/mitchellh/vagrant/issues/6852) and need to [install some additional libraries](https://www.microsoft.com/en-us/download/details.aspx?id=8328) to get vagrant working. 
+
+
+
