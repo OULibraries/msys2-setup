@@ -16,19 +16,25 @@ or grab a team member.
 
 
 
-### Unify MSYS2 and Windows homes We like to have our user folders
-unified between msys2 and windows. The following steps will copy the
-default configuration files from your MSYS2 home to your Windows home,
-and then create a link so that your Windows home directory will be
-used as your MSYS2 home directory
+### Unify MSYS2 and Windows homes
 
-Open CMD as administrator, run the following:
+We like to have our user folders unified between MSYS2 and Windows. 
+
+Open the windows command prompt (cmd) as administrator.
+
+Copy the default configuration files from your MSYS2 home to your
+Windows home. 
 ```
 copy C:\msys64\home\%USERNAME%\* %USERPROFILE%
 ```
+
+Backup your original msys2 home folder, just in case. 
 ```
 rename C:\msys64\home\%USERNAME% %USERNAME%.bak
 ```
+
+Create a link so that your Windows home directory will be
+used as your MSYS2 home directory
 ```
 mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 ```
