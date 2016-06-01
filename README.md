@@ -57,7 +57,7 @@ Life is easier in Vagrant if we alwasy just run msys2 as Admin.  To do so:
 
 
 
-### Install some basic tools
+### Install Some Tools
 
 `pacman` is the MSYS2 package manager, and can be used to search for and install lots of packages. 
 
