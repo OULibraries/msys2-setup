@@ -1,12 +1,26 @@
-# Install MSYS2 64
+# OU Libraries Standard MSYS2 Developer Setup
+
+This guide covers the installation of a basic CLI toolset for Windows users. 
+
+## Install MSYS2 64
 Get msys2  from http://msys2.github.io/
 
-You want the x86_64 version. If you have any problems, checout out the [full installation instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation).
+You want the x86_64 version. Following the instructions at the
+download site and accepting the installer defaults should result in a
+generally worky MSYS2 intall. Make sure to run command line steps for
+updating the package database and pacman.
 
-## Note that you can copy/paste the commands in the code blocks
+If you have any problems, refer to the [full installation
+instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation)
+or grab a team member.
 
-##  Unify MSYS2 and Windows homes
-We like to have our user folders unified between msys2 and windows.
+
+
+### Unify MSYS2 and Windows homes We like to have our user folders
+unified between msys2 and windows. The following steps will copy the
+default configuration files from your MSYS2 home to your Windows home,
+and then create a link so that your Windows home directory will be
+used as your MSYS2 home directory
 
 Open CMD as administrator, run the following:
 ```
@@ -19,10 +33,10 @@ rename C:\msys64\home\%USERNAME% %USERNAME%.bak
 mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 ```
 
-## Set up MSYS2 to run as Admin
-Life is easier in Vagrant if we just run msys2 as Admin.  To do so:
+### Set up MSYS2 to run as Admin
+Life is easier in Vagrant if we alwasy just run msys2 as Admin.  To do so:
 
-* Search msys2 in start and right click the app
+* Search for "msys2" in and right click the app
 * Click "Open file Location"
 * Right click "MSYS2 Shell"
 * Click properties
@@ -32,31 +46,28 @@ Life is easier in Vagrant if we just run msys2 as Admin.  To do so:
 * Click OK
 * Close out the file explorer
 
-## Update MSYS2 and install some packages
 
-Run msys2 from the start menu
 
-Update msys2 core by running
-```
-update-core
-```
-close and reopen msys2
+### Install some basic tools
 
-Update msys2 packages by running
-```
-pacman -Su --noconfirm
-```
-Install our various utilities and helpers
+`pacman` is the MSYS2 package manager, and can be used to search for and install lots of packages. 
+
+Running the following will give you python2, git, and a couple of editors. 
+
 ```
 pacman -S --needed --noconfirm \
 mingw64/mingw-w64-x86_64-python2 \
 mingw64/mingw-w64-x86_64-emacs \
 msys/vim \
 msys/nano \
-msys/git 
+msys/git \
 ```
 
-# Configure Vim
+See the [full docs for pacman](https://wiki.archlinux.org/index.php/pacman) if you want to learn more. 
+
+
+
+## Configure Vim
 
 Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation: 
 
@@ -64,9 +75,9 @@ Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation:
 echo "set nocompatible" >> ~/.vimrc
 ```
 
-# Configure SSH
+## Configure SSH
 
-## Generate an SSH Key
+### Generate an SSH Key
 
 In the msys2 shell, run  
 ```
@@ -74,7 +85,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 to generate an ssh keys. Fill in your personal email and a strong passphrase, but accept the defaults for everything else, including the key name and location.
 
-## Set up SSH Agent
+### Set up SSH Agent
 
 Fetch some of the config we figured out in the MinGW days
 ```
@@ -86,6 +97,6 @@ chown 700 .ssh
 ```
 Then close and reopen msys2
 
-## Set up your SSH Key at GitHub
+### Set up your SSH Key at GitHub
 
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
