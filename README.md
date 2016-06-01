@@ -1,4 +1,4 @@
-## Install MSYS2 64
+# Install MSYS2 64
 Get msys2  from http://msys2.github.io/
 
 You want the x86_64 version. If you have any problems, checout out the [full installation instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation).
@@ -64,7 +64,9 @@ Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation:
 echo "set nocompatible" >> ~/.vimrc
 ```
 
-# Generate an SSH Key
+# Configure SSH
+
+## Generate an SSH Key
 
 In the msys2 shell, run  
 ```
@@ -72,7 +74,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 to generate an ssh keys. Fill in your personal email and a strong passphrase, but accept the defaults for everything else, including the key name and location.
 
-# Set up SSH Agent
+## Set up SSH Agent
 
 Fetch some of the config we figured out in the MinGW days
 ```
@@ -84,6 +86,6 @@ chown 700 .ssh
 ```
 Then close and reopen msys2
 
-# Set up your SSH Key at GitHub
+## Set up your SSH Key at GitHub
 
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
