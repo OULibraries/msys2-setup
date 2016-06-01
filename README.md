@@ -1,6 +1,8 @@
 ## Install MSYS2 64
 Get msys2  from http://msys2.github.io/
 
+You want the x86_64 version. If you have any problems, checout out the [full installation instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation).
+
 ## Note that you can copy/paste the commands in the code blocks
 
 ##  Unify MSYS2 and Windows homes
