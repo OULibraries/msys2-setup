@@ -1,26 +1,51 @@
-# Install MSYS2 64
-Get msys2  from http://msys2.github.io/
+# OU Libraries Standard MSYS2 Developer Setup
 
-## Note that you can copy/paste the commands in the code blocks
+This guide covers the installation of a basic CLI toolset for Windows devs.  
 
-##  Unify MSYS2 and Windows homes
-We like to have our user folders unified between msys2 and windows.
+## Install MSYS2 64
 
-Open CMD as administrator, run the following:
+Get MSYS2  from http://msys2.github.io/
+
+You almost certainly want the x86_64 installer. Following the
+instructions at the download site, and using the installer defaults
+should result in a generally worky MSYS2 intall. Make sure to run the
+command line steps for updating the package database and pacman.
+
+If you have any problems, refer to the [full installation
+instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation)
+or grab a team member.
+
+### Unify MSYS2 and Windows homes
+
+We like to have our user folders unified between MSYS2 and Windows. 
+
+First, open the windows command prompt (cmd) as administrator. Then
+Copy the default configuration files from your MSYS2 home to your
+Windows home.
+
 ```
 copy C:\msys64\home\%USERNAME%\* %USERPROFILE%
 ```
+
+In the same command prompt window, backup your original msys2 home
+folder, just in case.
+
 ```
 rename C:\msys64\home\%USERNAME% %USERNAME%.bak
 ```
+
+Then, (still in the same window) create a link so that your Windows
+home directory will be used as your MSYS2 home directory
+
 ```
 mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 ```
 
-## Set up MSYS2 to run as Admin
-Life is easier in Vagrant if we just run msys2 as Admin.  To do so:
+### Set up MSYS2 to run as Admin
 
-* Search msys2 in start and right click the app
+Life is easier in Vagrant if we alwasy just run msys2 as Admin.  To do so:
+
+* Search for "msys2" in and right click the app
 * Click "Open file Location"
 * Right click "MSYS2 Shell"
 * Click properties
@@ -30,31 +55,28 @@ Life is easier in Vagrant if we just run msys2 as Admin.  To do so:
 * Click OK
 * Close out the file explorer
 
-## Update MSYS2 and install some packages
 
-Run msys2 from the start menu
 
-Update msys2 core by running
-```
-update-core
-```
-close and reopen msys2
+### Install Some Tools
 
-Update msys2 packages by running
-```
-pacman -Su --noconfirm
-```
-Install our various utilities and helpers
+`pacman` is the MSYS2 package manager, and can be used to search for and install lots of packages. 
+
+Running the following will give you python2, git, and a couple of editors. 
+
 ```
 pacman -S --needed --noconfirm \
 mingw64/mingw-w64-x86_64-python2 \
 mingw64/mingw-w64-x86_64-emacs \
 msys/vim \
 msys/nano \
-msys/git 
+msys/git \
 ```
 
-# Configure Vim
+See the [full docs for pacman](https://wiki.archlinux.org/index.php/pacman) if you want to learn more. 
+
+
+
+## Configure Vim
 
 Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation: 
 
@@ -62,7 +84,9 @@ Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation:
 echo "set nocompatible" >> ~/.vimrc
 ```
 
-# Generate an SSH Key
+## Configure SSH
+
+### Generate an SSH Key
 
 In the msys2 shell, run  
 ```
@@ -70,7 +94,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 to generate an ssh keys. Fill in your personal email and a strong passphrase, but accept the defaults for everything else, including the key name and location.
 
-# Set up SSH Agent
+### Set up SSH Agent
 
 Fetch some of the config we figured out in the MinGW days
 ```
@@ -82,11 +106,15 @@ chown 700 .ssh
 ```
 Then close and reopen msys2
 
-# Set up your SSH Key at GitHub
+### Set up your SSH Key at GitHub
+
+Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub.
+
+
 
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
 
-# Install VirtualBox and Vagrant
+## Install VirtualBox and Vagrant
 
 ## Virtualbox 
 Download and install the latest VirtualBox Platform Pack and VirtualBox Extension Pack from https://www.virtualbox.org.
@@ -96,6 +124,3 @@ Download and install the latest VirtualBox Platform Pack and VirtualBox Extensio
 Download and install [https://www.vagrantup.com/](https://www.vagrantup.com/)
 
 Windows 10 users may run in to [this bug](https://github.com/mitchellh/vagrant/issues/6852) and need to [install some additional libraries](https://www.microsoft.com/en-us/download/details.aspx?id=8328) to get vagrant working. 
-
-
-
