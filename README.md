@@ -1,20 +1,19 @@
 # OU Libraries Standard MSYS2 Developer Setup
 
-This guide covers the installation of a basic CLI toolset for Windows users. 
+This guide covers the installation of a basic CLI toolset for Windows devs.  
 
 ## Install MSYS2 64
-Get msys2  from http://msys2.github.io/
 
-You want the x86_64 version. Following the instructions at the
-download site and accepting the installer defaults should result in a
-generally worky MSYS2 intall. Make sure to run command line steps for
-updating the package database and pacman.
+Get MSYS2  from http://msys2.github.io/
+
+You almost certainly want the x86_64 installer. Following the
+instructions at the download site, and using the installer defaults
+should result in a generally worky MSYS2 intall. Make sure to run the
+command line steps for updating the package database and pacman.
 
 If you have any problems, refer to the [full installation
 instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation)
 or grab a team member.
-
-
 
 ### Unify MSYS2 and Windows homes
 
@@ -43,6 +42,7 @@ mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 ```
 
 ### Set up MSYS2 to run as Admin
+
 Life is easier in Vagrant if we alwasy just run msys2 as Admin.  To do so:
 
 * Search for "msys2" in and right click the app
@@ -108,4 +108,7 @@ Then close and reopen msys2
 
 ### Set up your SSH Key at GitHub
 
-Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
+Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub.
+
+
+
