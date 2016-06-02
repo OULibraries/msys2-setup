@@ -116,8 +116,6 @@ Follow GitHub's [instructions for adding an ssh key](https://help.github.com/art
 
 
 
-Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub. 
-
 ## Install VirtualBox and Vagrant
 
 Many of our local development environments use Vagrant to control VirtualBox-based VMs. 
