@@ -86,13 +86,17 @@ echo "set nocompatible" >> ~/.vimrc
 
 ## Configure SSH
 
-### Generate an SSH Key
+Most of our work on libraries systems happens via SSH. 
 
-In the msys2 shell, run  
+### Generate an SSH Key pair
+
+We use public/private key pairs to authenticate SSH connections. 
+
+To generate a key pair, start the MSYS2 Shell, and run the following command  
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-to generate an ssh keys. Fill in your personal email and a strong passphrase, but accept the defaults for everything else, including the key name and location.
+Fill in your personal email and a strong passphrase, but it's fine to accept the rest of the defaults. You may wish to include your username and the date in your key's filename, especially if you have multiple keys to keep track of. 
 
 ### Set up SSH Agent
 
