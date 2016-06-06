@@ -19,23 +19,24 @@ or grab a team member.
 
 We like to have our user folders unified between MSYS2 and Windows. 
 
-First, open the windows command prompt (cmd) as administrator. Then
-Copy the default configuration files from your MSYS2 home to your
-Windows home.
+First, open a Windows command prompt (cmd) as administrator. Then
+run the following copy command to duplicate the default configuration 
+files from your MSYS2 home to your Windows home.
 
 ```
 copy C:\msys64\home\%USERNAME%\* %USERPROFILE%
 ```
 
-In the same command prompt window, backup your original msys2 home
-folder, just in case.
+In the same cmd window, move your original msys2 home
+folder out of the way, just in case.
 
 ```
 rename C:\msys64\home\%USERNAME% %USERNAME%.bak
 ```
 
 Then, (still in the same window) create a link so that your Windows
-home directory will be used as your MSYS2 home directory
+home directory will be used as your MSYS2 home directory. This is the 
+only step that really needs Administrator privleges. 
 
 ```
 mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
