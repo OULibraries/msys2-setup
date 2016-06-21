@@ -17,9 +17,11 @@ or grab a team member.
 
 ### Unify MSYS2 and Windows homes
 
-We like to have our user folders unified between MSYS2 and Windows. 
+We like to link have a single directory serve as both our MSYS2 home 
+directory  (`/home/doe0000`) and our Windows home directory (`C:\Users\doe0000`). 
+In order to do that, we'll make the MSYS2 path a link to the Windows one. 
 
-First, open a Windows command prompt (cmd) as administrator. Then
+First, open a Windows command prompt (cmd) as Administrator. Then
 run the following copy command to duplicate the default configuration 
 files from your MSYS2 home to your Windows home.
 
@@ -42,22 +44,6 @@ only step that really needs Administrator privleges.
 mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 ```
 
-### Set up MSYS2 to run as Admin
-
-Life is easier in Vagrant if we alwasy just run msys2 as Admin.  To do so:
-
-* Search for "msys2" in and right click the app
-* Click "Open file Location"
-* Right click "MSYS2 Shell"
-* Click properties
-* Click advanced
-* Check "Run as administrator"
-* Click OK
-* Click OK
-* Close out the file explorer
-
-
-
 ### Install Some Tools
 
 `pacman` is the MSYS2 package manager, and can be used to search for and install lots of packages. 
@@ -67,23 +53,27 @@ Running the following will give you python2, git, and a couple of editors.
 ```
 pacman -S --needed --noconfirm \
 mingw64/mingw-w64-x86_64-python2 \
-mingw64/mingw-w64-x86_64-emacs \
 msys/vim \
 msys/nano \
 msys/git \
+msys/rsync \
+msys/tar \
+msys/gzip 
 ```
 
-See the [full docs for pacman](https://wiki.archlinux.org/index.php/pacman) if you want to learn more. 
-
+See the [full docs for pacman](https://wiki.archlinux.org/index.php/pacman) if you want to learn more.  Many other packages are available. 
 
 
 ## Configure Vim
 
-Create a ~/.vimrc file that keeps vim from falling back on strict vi emulation: 
+Create a `~/.vimrc` file that turns on syntax highlighting and keeps vim from falling back on strict vi emulation: 
 
 ```
 echo "set nocompatible" >> ~/.vimrc
+echo "syntax on" >> ~/.vimrc
 ```
+
+If you become a habitual vim user, you may wish to look at other vim configuration options and add-ons. The [sensible.vim](https://github.com/tpope/vim-sensible) project is a good place to get started. 
 
 ## Configure SSH
 
@@ -116,17 +106,21 @@ Then close and reopen msys2
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub.
 
 
+### Install the OU Libraries standard ssh config
+
+Once you can connect to GitHub, you'll need to get [our standard ssh config](https://github.com/OULibraries/ssh_config) and configure your ssh keys for use with our systems.
+
 
 ## Install VirtualBox and Vagrant
 
 Many of our local development environments use Vagrant to control VirtualBox-based VMs. 
 
-## VirtualBox
+### VirtualBox
 
 Download and install the latest VirtualBox Platform Pack and
 VirtualBox Extension Pack from https://www.virtualbox.org.
 
-##Vagrant
+### Vagrant
 
 Download and install https://www.vagrantup.com/
 
