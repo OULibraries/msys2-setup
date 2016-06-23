@@ -46,9 +46,15 @@ fi
 # to paste the proper path after ssh-add
 if ! agent_is_running; then
     agent_start
-    ssh-add
+    for file in $(grep IdentityFile ~/.ssh/config | awk '{print $2}') ;
+      do ssh-add "$file"; 
+    done
+
 elif ! agent_has_keys; then
-    ssh-add
+    for file in $(grep IdentityFile ~/.ssh/config | awk '{print $2}') ;
+      do ssh-add "$file";
+    done
+
 fi
 
 unset env
