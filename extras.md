@@ -11,12 +11,14 @@ tool for turning your caps lock key in to a second control key that has worked
 reliably across several versions of Windows. 
 
 
-## CLI Package Management
+## Package Management
 
 The [Chocolatey](https://chocolatey.org/) package manager can install thousands
-of Windows apps and utilities. This includes CLI tools like `rsync` and `curl`,
-as well as standard Windows apps like Notepad++ and Firefox. 
+of Windows tools including things like Notepad++, Firefox, Vagrant, and more. 
 
+Many CLI packages for things like `rsync` and `curl` are also available, but
+we've mostly standardized on the MSYS2 provided version of those tools, and
+mixing other versions in could lead to unpredictable results.    
 
 ## Piping to/from the Clipboard
 
