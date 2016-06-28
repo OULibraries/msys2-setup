@@ -3,13 +3,13 @@
 This guide covers the installation of a basic CLI toolset for Windows devs.
 
 ###[Basic MSYS Setup](./01-msys2.md)
-Bash setup, and core app configuration.
+Basic setup and configuration required for a reasonably worky shell environment. 
 
 ###[SSH Configuration](02-ssh.md)
-SSH Configuration. 
+SSH Configuration 
 
 ###[Virtualbox and Vagrant](03-vms.md)
-Tools for managing VMs.
+Our tools for managing VMs.
 
 ###[Extras](04-extras.md)
 Other stuff.
