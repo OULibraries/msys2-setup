@@ -127,3 +127,23 @@ Download and install https://www.vagrantup.com/
 Windows 10 users may run in to [this bug](https://github.com/mitchellh/vagrant/issues/6852)
 and need to [install some additional libraries](https://www.microsoft.com/en-us/download/details.aspx?id=8328)
 to get vagrant working.
+
+## Set up Git
+
+The following git settings should be configured in the MSYS setup and on any virtual machine where you'll be running git. 
+
+Configure your identity
+```
+git config --global user.email "jdoe@example.com"
+git config --global user.name "Jane Doe"
+```
+
+Set up colorized git output. 
+```
+git config --global color.ui true
+```
+
+Set up new push behavior, rather than old default. 
+```
+git config --global push.default simple
+```
