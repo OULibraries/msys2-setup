@@ -6,7 +6,7 @@ This guide covers the installation of a basic CLI toolset for Windows devs.
 Basic setup and configuration required for a reasonably worky shell environment. 
 
 ###[SSH Configuration](02-ssh.md)
-SSH Configuration 
+SSetting up SSH, creating keys, and using them to connect. 
 
 ###[Virtualbox and Vagrant](03-vms.md)
 Our tools for managing VMs.
