@@ -31,4 +31,4 @@ Follow GitHub's [instructions for adding an ssh key](https://help.github.com/art
 
 ## Install the OU Libraries standard ssh config
 
-Once you can connect to GitHub, you'll need to get [our standard ssh config](https://github.com/OULibraries/ssh_config) and configure your ssh keys for use with our systems.
+Once you can connect to GitHub, you'll need to get [our standard ssh config](https://github.com/OULibraries/ssh_config) and configure your ssh keys for use with our systems. This is a private repository, so you may need to request access. 
