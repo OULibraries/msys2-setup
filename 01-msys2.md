@@ -71,3 +71,27 @@ echo "syntax on" >> ~/.vimrc
 ```
 
 If you become a habitual vim user, you may wish to look at other vim configuration options and add-ons. The [sensible.vim](https://github.com/tpope/vim-sensible) project is a good place to get started.
+
+
+
+## Set up Git
+
+The following git settings should be configured in the MSYS setup and, later,  on other environments where you'll be running git. 
+
+Configure your identity
+```
+git config --global user.email "jdoe@example.com"
+git config --global user.name "Jane Doe"
+```
+
+Set up colorized git output. 
+```
+git config --global color.ui true
+```
+
+Set up new push behavior, rather than old default. 
+```
+git config --global push.default simple
+```
+
+
