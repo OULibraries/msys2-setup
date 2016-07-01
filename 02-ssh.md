@@ -10,7 +10,7 @@ To generate a key pair, start the MSYS2 Shell, and run the following command
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-Fill in your personal email and a strong passphrase, but it's fine to accept the rest of the defaults. You may wish to include your username and the date in your key's filename, especially if you have multiple keys to keep track of. 
+Fill in your personal email and a strong passphrase, but it's fine to accept the rest of the defaults. If you change the name of the key files, you may need to account for that in the `ssh-agent` script below. 
 
 ## Set up SSH Agent
 
