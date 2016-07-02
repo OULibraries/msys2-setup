@@ -9,10 +9,11 @@ command line steps for updating the package database and pacman.
 
 If you have any problems, refer to the [full installation
 instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation)
-or grab a team member.
+or grab a team member. 
 
-If you see an error like "msys2 shell command not found" when starting MSYS2, take a look at #10. 
-If the MSYS2 launcher opens both the MSYS2 shell and the Windows cmd shell, take a look at #9. 
+If you see an error like "msys2 shell command not found" when starting MSYS2, 
+take a look at issue #10 . If the MSYS2 launcher opens both the MSYS2 shell 
+and the Windows cmd shell, take a look at issue #9. 
 
 ## Unify MSYS2 and Windows homes
 
