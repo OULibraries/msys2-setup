@@ -17,6 +17,11 @@ Some notes on using Acquia DevDesktop for Drupal.
 ###[Extras](05-extras.md)
 Assorted other stuff that might be useful.
 
-###[Links and Docs](06-docss.md)
-Get sucked in to the CLI.
+
+## Docs and Tutorials 
+
+Once you've got all this stuff installed, here are some good tutorials to check out:
+
+* [The Unix Shell](http://swcarpentry.github.io/shell-novice/) introduces you to CLI basics 
+* [Unix as IDE](https://sanctum.geek.nz/arabesque/series/unix-as-ide/) post series is a good introduction to CLI-oriented development
 
