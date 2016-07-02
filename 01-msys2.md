@@ -12,8 +12,8 @@ instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation)
 or grab a team member. 
 
 If you see an error like "msys2 shell command not found" when starting MSYS2, 
-take a look at issue #10 . If the MSYS2 launcher opens both the MSYS2 shell 
-and the Windows cmd shell, take a look at issue #9. 
+take a look at issue [#10](https://github.com/OULibraries/msys2-setup/issues/10) . If the MSYS2 launcher opens both the MSYS2 shell 
+and the Windows cmd shell, take a look at issue [#9](https://github.com/OULibraries/msys2-setup/issues/10). 
 
 ## Unify MSYS2 and Windows homes
 
