@@ -2,6 +2,8 @@
 
 This guide covers the installation of a basic CLI toolset for Windows devs.
 
+## Set Up Your Environment
+
 ###[Basic MSYS Setup](./01-msys2.md)
 Basic setup required for a reasonably worky shell environment. 
 
