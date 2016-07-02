@@ -24,6 +24,6 @@ Assorted other stuff that might be useful.
 
 Once you've got all this stuff installed, here are some good tutorials to check out:
 
-* [The Unix Shell](http://swcarpentry.github.io/shell-novice/) introduces you to CLI basics 
+* Software Carpentry's [Shell Novice](http://swcarpentry.github.io/shell-novice/) lesson introduces CLI basics 
 * [Unix as IDE](https://sanctum.geek.nz/arabesque/series/unix-as-ide/) post series is a good introduction to CLI-oriented development
 
