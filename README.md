@@ -4,11 +4,11 @@ This guide covers the installation of a basic CLI toolset for Windows devs.
 
 ## Set Up Your Environment
 
-###[Basic MSYS Setup](./01-msys2.md)
+###[MSYS2 CLI tools](./01-msys2.md)
 Basic setup required for a reasonably worky shell environment. 
 
-###[SSH Configuration](02-ssh.md)
-Configuration of SSH for key-based authentication.
+###[SSH](02-ssh.md)
+SSH for key-based authentication.
 
 ###[Virtualbox and Vagrant](03-vms.md)
 Our tools for managing VMs.
