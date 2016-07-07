@@ -77,7 +77,7 @@ echo "set nocompatible" >> ~/.vimrc
 echo "syntax on" >> ~/.vimrc
 ```
 
-If you become a habitual vim user, you may wish to look at other vim configuration options and add-ons. The [sensible.vim](https://github.com/tpope/vim-sensible) project is a good place to get started.
+If you become a habitual vim user, you may wish to look at other vim configuration options and add-ons. The [sensible.vim](https://github.com/tpope/vim-sensible) project is a good place to get started, and [pathogen.vim]( https://github.com/tpope/vim-pathogen) is a good way to get that set up. 
 
 
 
