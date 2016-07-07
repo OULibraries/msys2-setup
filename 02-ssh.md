@@ -2,17 +2,6 @@
 
 Most of our work on libraries systems happens via SSH. 
 
-## Set up SSH Agent
-
-Fetch some of the config we figured out in the MinGW days
-```
-curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh && \
-chmod +x ssh-agent.sh && \
-mv ssh-agent.sh /etc/profile.d/ && \
-mkdir .ssh && \
-chmod 700 .ssh
-```
-
 ## Generate an SSH Key pair
 
 We use public/private key pairs to authenticate SSH connections. 
@@ -25,10 +14,23 @@ Fill in your personal email and a strong passphrase, but it's fine to accept the
 
 This will create two key files. A `.pub` file, which you will share out with various 3rd parties to allow them to verify your identy, and a private key file that you should keep secret and treat like a password. 
 
+## Set up SSH Agent
+
+Fetch some of the config we figured out in the MinGW days
+```
+curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh && \
+chmod +x ssh-agent.sh && \
+mv ssh-agent.sh /etc/profile.d/ && \
+mkdir -p .ssh && \
+chmod 700 .ssh && \
+touch .ssh/config
+```
 
 ## Set up your SSH Key at GitHub
 
 Follow GitHub's [instructions for adding an ssh key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows) to your account, and [testing your ssh connection](https://help.github.com/articles/testing-your-ssh-connection/) with GitHub.
+
+
 
 ## Send your public key to Ops
 
