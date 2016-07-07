@@ -22,7 +22,7 @@ curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh && \
 chmod +x ssh-agent.sh && \
 mv ssh-agent.sh /etc/profile.d/ && \
 mkdir .ssh && \
-chown 700 .ssh
+chmod 700 .ssh
 ```
 Then close and reopen msys2
 
