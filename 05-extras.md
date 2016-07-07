@@ -4,6 +4,11 @@ The following hints and tools are things that some devs have found to be
 helpful when working on Windows. 
 
 
+## Show All File Extensions
+
+Open up the Appearance and Personalization settings under the Control Panel. Then 
+go in to the File Explorer Options and  uncheck "Hide extensions for know filetypes."
+
 ## Map Caps Lock to Control
 
 [Ctrl2Cap](https://technet.microsoft.com/en-us/sysinternals/bb897578.aspx) is a
