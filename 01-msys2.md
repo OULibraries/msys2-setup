@@ -4,16 +4,19 @@ Get MSYS2  from http://msys2.github.io/
 
 You almost certainly want the x86_64 installer. Following the
 instructions at the download site, and using the installer defaults
-should result in a generally worky MSYS2 intall. Make sure to run the
-command line steps for updating the package database and pacman.
+should result in a generally worky MSYS2 intall. 
+
+Make sure to run the command line steps for updating the MSYS2 package
+database and pacman!
 
 If you have any problems, refer to the [full installation
 instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation)
 or grab a team member. 
 
 If you see an error like "msys2 shell command not found" when starting MSYS2, 
-take a look at issue [#10](https://github.com/OULibraries/msys2-setup/issues/10) . If the MSYS2 launcher opens both the MSYS2 shell 
-and the Windows cmd shell, take a look at issue [#9](https://github.com/OULibraries/msys2-setup/issues/10). 
+take a look at issue [#10](https://github.com/OULibraries/msys2-setup/issues/10). 
+If the MSYS2 launcher opens both the MSYS2 shell and the Windows cmd shell, take 
+a look at issue [#9](https://github.com/OULibraries/msys2-setup/issues/10). 
 
 ## Unify MSYS2 and Windows homes
 
