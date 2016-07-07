@@ -6,8 +6,8 @@ You almost certainly want the x86_64 installer. Following the
 instructions at the download site, and using the installer defaults
 should result in a generally worky MSYS2 intall. 
 
-Make sure to run the command line steps for updating the MSYS2 package
-database and pacman!
+<b>Make sure to run the command line steps for updating the MSYS2 package
+database and pacman!</b>
 
 If you have any problems, refer to the [full installation
 instructions](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation)
