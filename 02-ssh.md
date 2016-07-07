@@ -2,6 +2,17 @@
 
 Most of our work on libraries systems happens via SSH. 
 
+## Set up SSH Agent
+
+Fetch some of the config we figured out in the MinGW days
+```
+curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh && \
+chmod +x ssh-agent.sh && \
+mv ssh-agent.sh /etc/profile.d/ && \
+mkdir .ssh && \
+chmod 700 .ssh
+```
+
 ## Generate an SSH Key pair
 
 We use public/private key pairs to authenticate SSH connections. 
@@ -14,17 +25,6 @@ Fill in your personal email and a strong passphrase, but it's fine to accept the
 
 This will create two key files. A `.pub` file, which you will share out with various 3rd parties to allow them to verify your identy, and a private key file that you should keep secret and treat like a password. 
 
-## Set up SSH Agent
-
-Fetch some of the config we figured out in the MinGW days
-```
-curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh && \
-chmod +x ssh-agent.sh && \
-mv ssh-agent.sh /etc/profile.d/ && \
-mkdir .ssh && \
-chmod 700 .ssh
-```
-Then close and reopen msys2
 
 ## Set up your SSH Key at GitHub
 
