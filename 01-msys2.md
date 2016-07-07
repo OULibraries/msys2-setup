@@ -1,4 +1,4 @@
-# Install MSYS2 64
+# Install an MSYS2-based CLI Toolset
 
 Get MSYS2  from http://msys2.github.io/
 
