@@ -25,11 +25,7 @@ Host *
   IdentityFile /home/doe0000/.ssh/id_rsa
 ```
 
-SSH is picky about the permissions of the `~/.ssh` and its contents, so set the folder permissions as follows to make sure that they're right. 
 
-```
-chmod 700 .ssh
-```
 
 ## Set up SSH Agent
 
