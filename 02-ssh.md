@@ -35,7 +35,7 @@ curl -OL https://github.com/OULibraries/msys2-setup/raw/master/ssh-agent.sh && \
 chmod +x ssh-agent.sh && \
 mv ssh-agent.sh /etc/profile.d/
 ```
-This script checks to make sure that the ssh-agent keymanager is running and has access to your keys when you open a new MSYS2 shell. 
+This script checks to make sure that the ssh-agent key manager is running and has access to your keys when you open a new MSYS2 shell. Once you've installed it, quit and restart MSYS2. You should get asked to enter your the passphrase required to uncock the key that you just created, after which your key will be available to ssh.  
 
 ## Set up your SSH Key at GitHub
 
