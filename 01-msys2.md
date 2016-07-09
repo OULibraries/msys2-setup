@@ -35,7 +35,6 @@ copy C:\msys64\home\%USERNAME%\* %USERPROFILE%
 In the same cmd window, move your original msys2 home
 folder out of the way, just in case.
 
-
 ```
 rename C:\msys64\home\%USERNAME% %USERNAME%.bak
 ```
@@ -65,8 +64,7 @@ msys/tar \
 msys/gzip 
 ```
 
-See the [full docs for pacman](https://wiki.archlinux.org/index.php/pacman) if you want to learn more.  Many other packages are available. 
-
+See the [full docs for pacman](https://wiki.archlinux.org/index.php/pacman) if you want to learn more. Many other packages are available. 
 
 ## Configure Vim
 
@@ -77,13 +75,11 @@ echo "set nocompatible" >> ~/.vimrc
 echo "syntax on" >> ~/.vimrc
 ```
 
-If you become a habitual vim user, you may wish to look at other vim configuration options and add-ons. The [sensible.vim](https://github.com/tpope/vim-sensible) project is a good place to get started, and [pathogen.vim]( https://github.com/tpope/vim-pathogen) is a good way to get that set up. 
-
-
+If you become a habitual vim user, you may wish to look at other vim configuration options and add-ons. Setting up [pathogen.vim]( https://github.com/tpope/vim-pathogen) and installing the [sensible.vim](https://github.com/tpope/vim-sensible) project is a good place to get started.
 
 ## Set up Git
 
-The following git settings should be configured in the MSYS setup and, later,  on other environments where you'll be running git. 
+The following git settings should be configured in the MSYS setup and (later) on other environments where you'll be running git. 
 
 Configure your identity
 ```
@@ -100,5 +96,3 @@ Set up new push behavior, rather than old default.
 ```
 git config --global push.default simple
 ```
-
-
