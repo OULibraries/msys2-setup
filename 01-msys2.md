@@ -51,7 +51,7 @@ mklink /D C:\msys64\home\%USERNAME% %USERPROFILE%
 
 `pacman` is the MSYS2 package manager, and can be used to search for and install lots of packages. 
 
-Running the following will give you python2, git, and a couple of editors. 
+Running the following within msys2 will give you python2, git, and a couple of editors. 
 
 ```
 pacman -S --needed --noconfirm \
