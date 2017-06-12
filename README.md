@@ -4,19 +4,19 @@ This guide covers the installation of a basic CLI toolset for Windows devs.
 
 ## Set Up Your Environment
 
-###[MSYS2 CLI tools](./01-msys2.md)
+### [MSYS2 CLI tools](./01-msys2.md)
 Basic setup required for a reasonably worky shell environment. 
 
-###[SSH](02-ssh.md)
+### [SSH](02-ssh.md)
 SSH for key-based authentication.
 
-###[Virtualbox and Vagrant](03-vms.md)
+### [Virtualbox and Vagrant](03-vms.md)
 Our tools for managing VMs.
 
-###[DevDesktop](04-devdesktop.md)
+### [DevDesktop](04-devdesktop.md)
 Some notes on using Acquia DevDesktop for Drupal. 
 
-###[Extras](05-extras.md)
+### [Extras](05-extras.md)
 Assorted other stuff that might be useful.
 
 
